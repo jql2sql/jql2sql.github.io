@@ -34,7 +34,8 @@ To separate sources/toos and generated files, this repo has two branches like be
 
 Therefore,
 
-## Commit to main branch
+## Steps on main branch
+### Commit to main branch
 Add your modification into commit on main branch.
 ```
 git add docs/where/index.md
@@ -51,10 +52,20 @@ push your commit to github, please be aware of that your new commit is not sent 
 ### pull request in github website
 Now you can send pull request to original repo.
 
-## Generate website
+## Steps on pages branch
+### Generate website
 At here, you are ready to generate new website with your modification, please run the command below.
 ```
 npm run docs:build
 ```
-
 Once the command is done, generate files(html, css and javascript files) are stored in *pages* folder.
+
+### Move pages to somewhere else
+To switch *pages* branch, please move *pages* folder to somewhere out of repo directory.
+```
+mv pages ..
+```
+### Overwrite pages folder
+```
+mv -f ../pages .
+```
