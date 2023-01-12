@@ -1,0 +1,36 @@
+{
+  "name": "jql2sql.github.io",
+  "version": "0.0.1",
+  "description": "This repo is to develop website for jql2sql package",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs --config ./docs/.vuepress/config.js",
+    "docs:build": "vuepress build docs --config ./docs/.vuepress/config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jql2sql/jql2sql.github.io.git"
+  },
+  "keywords": [
+    "jql",
+    "sql",
+    "jql2sql",
+    "search",
+    "searching"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jql2sql/jql2sql.github.io/issues"
+  },
+  "homepage": "https://github.com/jql2sql/jql2sql.github.io#readme",
+  "devDependencies": {
+    "@vuepress/cli": "^2.0.0-beta.60",
+    "@vuepress/theme-default": "^2.0.0-beta.60",
+    "vuepress": "^2.0.0-beta.60"
+  }
+}
