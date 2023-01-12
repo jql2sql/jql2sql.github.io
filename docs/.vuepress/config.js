@@ -1,9 +1,9 @@
 import { defaultTheme } from '@vuepress/theme-default'
 
 export default {
-  base: '/jql2sql.github.io/',
   lang: 'en-US',
   title: 'jql2sql',
+  dest: 'pages',
   description: 'Transpiling JQL to SQL for comprehensive searching',
   theme: defaultTheme({
     // set config here
@@ -21,8 +21,12 @@ export default {
         link: '/features/',
       },
       {
-        text: 'Contribute',
-        link: '/contribute/',
+        text: 'Contribute jql2sql',
+        link: '/contribute-jql2sql/',
+      },
+      {
+        text: 'Contribute website',
+        link: '/contribute-website/',
       }
     ]    
   }),
