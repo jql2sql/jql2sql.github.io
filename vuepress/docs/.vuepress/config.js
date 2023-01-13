@@ -11,7 +11,7 @@ export default {
     sidebar: [
       {
         text: 'Demo',
-        link: '/',
+        link: '/index.html',
       },
       {
         text: 'Introduction',

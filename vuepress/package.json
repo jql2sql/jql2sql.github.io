@@ -8,7 +8,7 @@
   },
   "scripts": {
     "docs:dev": "vuepress dev docs --config ./docs/.vuepress/config.js",
-    "docs:build": "vuepress build docs --config ./docs/.vuepress/config.js",
+    "docs:build": "vuepress build docs --config ./docs/.vuepress/config.js && rm -rf ../docs && mv ./pages ../docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
