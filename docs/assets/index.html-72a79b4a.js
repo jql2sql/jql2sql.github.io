@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-39a70235","path":"/contribute-jql2sql/","title":"","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"contribute-jql2sql/index.md"}');export{t as data};

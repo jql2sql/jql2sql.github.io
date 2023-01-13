@@ -10,6 +10,10 @@ export default {
     // set config here
     sidebar: [
       {
+        text: 'Demo',
+        link: '/',
+      },
+      {
         text: 'Introduction',
         link: '/introduction/',
       },
