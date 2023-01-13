@@ -1,6 +1,7 @@
 import { defaultTheme } from '@vuepress/theme-default'
 
 export default {
+  base: '/',
   lang: 'en-US',
   title: 'jql2sql',
   dest: 'pages',
