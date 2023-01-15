@@ -1,7 +1,7 @@
 import { defaultTheme } from '@vuepress/theme-default'
 
 export default {
-  base: '/',
+  base: '/pages/',
   lang: 'en-US',
   title: 'jql2sql',
   dest: 'pages',
@@ -11,7 +11,7 @@ export default {
     sidebar: [
       {
         text: 'Demo',
-        link: '/index.html',
+        link: 'https://jql2sql.github.io/',
       },
       {
         text: 'Introduction',

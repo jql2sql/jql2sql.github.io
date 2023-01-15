@@ -47,7 +47,7 @@ function onSearchTerm() {
 <template>
   <table>
     <tr>
-      <td><a href="./docs/getting-started/"></a>Getting Started</td>
+      <td><a href="./pages/getting-started">Getting Started</a></td>
       <td> &nbsp;&nbsp;&nbsp;&nbsp; </td>
       <td><a href="https://github.com/jql2sql/jql2sql">Github</a></td>
     </tr>
