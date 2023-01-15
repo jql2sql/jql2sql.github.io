@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && mkdir -p ./docs/node_modules/sql.js/dist/ && cp -f ./node_modules/sql.js/dist/sql-wasm.wasm ./docs/node_modules/sql.js/dist/",
+    "build": "vite build && mkdir -p ./docs/node_modules/sql.js/dist/ && cp -f ./node_modules/sql.js/dist/sql-wasm.wasm ./docs/node_modules/sql.js/dist/sql-wasm.js",
     "preview": "vite preview"
   },
   "dependencies": {
