@@ -18,6 +18,12 @@ const items = ref([
   { name: "Kimchi stew", size: "X", price: 10},
 ]);
 
+// 필드 리스트
+const fields = ['name', 'size', 'price'];
+// 현재 지원되는 spec
+// field type은 숫자로된 필드만 지원
+// 지원되는 operator < > <= >= () or and
+
 const userSearchingKeyword = ref();
 const transpiled = ref();
 
@@ -53,12 +59,18 @@ function onSearchTerm() {
   />
   <br />
   <table>
+    <tr aligh="left"><td><b>Example Searching Keyword</b></td></tr>
+    <tr aligh="left"><td aligh="left">price = 10</td><td></td></tr>
+    <tr aligh="left"><td aligh="left">&#40;price &nbsp;&nbsp;&nbsp;&nbsp;    &gt;&#61;     9&#41; and price &lt; 11</td><td></td></tr>
     <tr>
-      <td>User Searching Keyword: </td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr aligh="left">
+      <td><b>User Searching Keyword: </b></td>
       <td><input v-model="userSearchingKeyword" placeholder="edit me" v-on:input="onSearchTerm()"/></td>
     </tr>
-    <tr>
-      <td>SQL where clause: </td>
+    <tr aligh="left">
+      <td><b>Transpfiled SQL: </b></td>
       <td><input v-model="transpiled" placeholder="Cleaned Searching Term" disabled/></td>
     </tr>
   </table>
