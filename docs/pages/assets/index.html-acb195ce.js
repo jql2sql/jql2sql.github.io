@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-39a70235","path":"/contribute-jql2sql/","title":"","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":1673576928000,"contributors":[{"name":"ByeongKeon Kim","email":"skysign@gmail.com","commits":1}]},"filePathRelative":"contribute-jql2sql/index.md"}');export{e as data};
