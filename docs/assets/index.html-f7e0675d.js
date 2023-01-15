@@ -1,1 +1,0 @@
-import{_ as e,p as t,q as n,R as s}from"./framework-96b046e1.js";const _={},c=s("p",null,"features",-1),o=[c];function r(a,l){return t(),n("div",null,o)}const i=e(_,[["render",r],["__file","index.html.vue"]]);export{i as default};
