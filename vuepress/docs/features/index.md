@@ -23,12 +23,12 @@ For more detail, please see [Operators](#operators) section below.
 |<          | >= 0.0.7 | N/A | 
 |>=         | >= 0.0.7 | N/A |
 |<=         | >= 0.0.7 | N/A |
-|~          | Will be supported | N/A |
-|!~         | Will be supported | N/A |
-|in         | Will be supported | N/A |
-|not in     | Will be supported | N/A |
-|is         | Will be supported | N/A |
-|is not     | Will be supported | N/A |
+|~          | >= 0.0.7 | N/A |
+|!~         | >= 0.0.11 | N/A |
+|in         | >= 0.0.11 | N/A |
+|not in     | >= 0.0.11 | N/A |
+|is         | >= 0.0.11 | N/A |
+|is not     | >= 0.0.11 | N/A |
 |was        | No plane to support |Too dependent on Jira|
 |was not    | No plane to support |Too dependent on Jira|
 |was in     | No plane to support |Too dependent on Jira|

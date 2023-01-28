@@ -38,9 +38,9 @@ function onSearchTerm() {
   else {
     transpiled.value = '';
   }
-  // console.log(searchingTerm.value);  
-  // console.log(parsed);
-  // console.log(sqlWhere);
+  console.log(searchingTerm.value);
+  console.log(parsed);
+  console.log(sqlWhere);
 }
 </script>
 
@@ -62,6 +62,8 @@ function onSearchTerm() {
     <tr aligh="left"><td><b>Example Searching Keyword</b></td></tr>
     <tr aligh="left"><td aligh="left">price = 10</td><td></td></tr>
     <tr aligh="left"><td aligh="left">&#40;price &nbsp;&nbsp;&nbsp;&nbsp;    &gt;&#61;     9&#41; and price &lt; 11</td><td></td></tr>
+    <tr aligh="left"><td aligh="left">size ~ &quot;X*&quot; and price = 10</td><td></td></tr>
+    <tr aligh="left"><td aligh="left">(name ~ &quot;*stew&quot; or name ~ &quot;Het*&quot;) and price = 10</td><td></td></tr>
     <tr>
       <td>&nbsp;</td>
     </tr>

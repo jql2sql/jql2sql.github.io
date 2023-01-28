@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-35380e8e","path":"/features/","title":"","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":1673576928000,"contributors":[{"name":"ByeongKeon Kim","email":"skysign@gmail.com","commits":1}]},"filePathRelative":"features/index.md"}');export{e as data};
