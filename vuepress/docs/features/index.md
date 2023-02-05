@@ -36,29 +36,8 @@ For more detail, please see [Operators](#operators) section below.
 |changed    | No plane to support |Too dependent on Jira|
 
 ### Functions
-#### Time Functions
 
-|Operator                   |Supported or Not    |Note                |
-|---------------------------|--------------------|--------------------|
-|startOfDay/Week/Month/Year | No plane to support | N/A |
-|endOfDay/Week/Month/Year   | No plane to support | N/A |
-|lastLogin()                | No plane to support | N/A |
-|now()                      | Will be supported ||
-|currentLogin()             | Will be supported ||
-
-#### People Functions
-|Operator                   |Supported or Not    |Note                |
-|---------------------------|--------------------|--------------------|
-|currentUser()| Will be supported | N/A |
-|membersOf()  | Will be supported | N/A |
-
-#### Issue Functions
-
-|Operator                   |Supported or Not    |Note                |
-|---------------------------|--------------------|--------------------|
-|issueHistory()   | No plane to support |Too dependent on Jira|
-|openSprints()    | No plane to support |Too dependent on Jira|
-|watchedIssues()  | No plane to support |Too dependent on Jira|
-|myApproval()     | No plane to support |Too dependent on Jira|
-|myPending()      | No plane to support |Too dependent on Jira|
+In Jira, many functions are introduced as per Jira's features. But, we just borrow jql grammer, so only few functions are supported as extended functions.
+Currently, only **now()** function will be supported and rest of jql functions will not be supported officially.
+However, you can implemented them as your own function with extended function feature.
 

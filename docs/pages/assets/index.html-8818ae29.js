@@ -1,1 +1,0 @@
-import{_ as e,p as t,q as n,R as c}from"./framework-96b046e1.js";const o={},s=c("p",null,"contribute jql2sql",-1),_=[s];function l(r,a){return t(),n("div",null,_)}const d=e(o,[["render",l],["__file","index.html.vue"]]);export{d as default};

@@ -5,7 +5,7 @@ export default {
   lang: 'en-US',
   title: 'jql2sql',
   dest: 'pages',
-  description: 'Transpiling JQL to SQL for comprehensive searching',
+  description: 'Transpiling JQL to SQL for comprehensive, flexible searching',
   theme: defaultTheme({
     // set config here
     sidebar: [
@@ -14,20 +14,12 @@ export default {
         link: 'https://jql2sql.github.io/',
       },
       {
-        text: 'Introduction',
-        link: '/introduction/',
-      },
-      {
-        text: 'Getting started',
-        link: '/getting-started/',
-      },
-      {
         text: 'Features',
         link: '/features/',
       },
       {
-        text: 'Contribute jql2sql',
-        link: '/contribute-jql2sql/',
+        text: 'Getting started',
+        link: '/getting-started/',
       },
       {
         text: 'Contribute website',
