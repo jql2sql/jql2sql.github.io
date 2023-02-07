@@ -64,6 +64,8 @@ function onSearchTerm() {
     <tr aligh="left"><td aligh="left">&#40;price &nbsp;&nbsp;&nbsp;&nbsp;    &gt;&#61;     9&#41; and price &lt; 11</td><td></td></tr>
     <tr aligh="left"><td aligh="left">size ~ &quot;X*&quot; and price = 10</td><td></td></tr>
     <tr aligh="left"><td aligh="left">(name ~ &quot;*stew&quot; or name ~ &quot;Het*&quot;) and price = 10</td><td></td></tr>
+    <tr aligh="left"><td aligh="left">name ~ &quot;Curry Ramen&quot; and price &lt;= 20</td><td></td></tr>
+    <tr aligh="left"><td aligh="left">size ~ &quot;M XL&quot; and name ~ &quot;Curry Ramen&quot;</td><td></td></tr>
     <tr>
       <td>&nbsp;</td>
     </tr>

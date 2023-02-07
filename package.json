@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "alasql": "^2.5.1",
-    "jql2sql": "^0.0.12",
+    "jql2sql": "^0.0.13",
     "vue": "^3.2.45",
     "vue3-easy-data-table": "^1.5.25"
   },

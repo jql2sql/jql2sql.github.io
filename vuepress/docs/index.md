@@ -1,9 +1,9 @@
 # JQL2SQL
 This package is helper to implement very comprehensive, flexible searching, something like below.
 
-|jql text|( item is 'good' or item is 'so so' ) and date < now()|
+|jql text|(description ~ 'Begin with*' or price = 100) date < NOW()'|
 |---|------------------------------------------------------|
-|**Transpiled SQL**| **(ITEM LIKE 'good' OR ITEM LIKE 'so so') AND DATE < NOW()**| 
+|**Transpiled SQL**| **(DESCRIPTION LIKE 'Begin with%' OR PRICE = 100) AND DATE < NOW()**| 
 
 We transfile jql text to SQL for completing various searching 'and', 'or', '()', %keyword% and so on.
 
