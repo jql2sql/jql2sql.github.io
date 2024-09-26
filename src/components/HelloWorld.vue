@@ -50,7 +50,7 @@ watch(() => props.msg, (newMsg, oldMsg) => {
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <!-- <h1>{{ msg }}</h1> -->
   <Vue3EasyDataTable
     :headers="headers"
     :items="items"

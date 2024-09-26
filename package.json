@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "alasql": "^2.5.1",
+    "alasql": "^4.5.2",
     "jql2sql": "^0.0.13",
     "vue": "^3.2.45",
     "vue3-easy-data-table": "^1.5.25"

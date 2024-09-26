@@ -26,6 +26,7 @@ const fields = ['name', 'size', 'price'];
 
 const userSearchingKeyword = ref();
 const transpiled = ref();
+const transpiled_select_sql = ref();
 
 function onSearchTerm() {
   const parsed = parseJQL(userSearchingKeyword.value);
@@ -34,13 +35,19 @@ function onSearchTerm() {
   if (null != parsed) {
     sqlWhere = transpile2SQL(parsed, null);
     transpiled.value = sqlWhere;
+    transpiled_select_sql.value = 'select * from bobs where ' + sqlWhere;
   }
   else {
     transpiled.value = '';
   }
-  console.log(searchingTerm.value);
   console.log(parsed);
   console.log(sqlWhere);
+}
+
+function btnHandler(str) {
+  console.log(str)
+  userSearchingKeyword.value = str
+  onSearchTerm()
 }
 </script>
 
@@ -53,37 +60,96 @@ function onSearchTerm() {
     </tr>
   </table> 
   <br />
+  <div class="my_title">jql2sql live demo</div><br />
+  <div class="my_title_description">Please click the example JQL below</div>
+  <br />
+  <div><b>Table data to search BY JQL</b></div>
   <Vue3EasyDataTable
     :headers="headers"
     :items="items"
   />
   <br />
-  <table>
-    <tr aligh="left"><td><b>Example Searching Keyword</b></td></tr>
-    <tr aligh="left"><td aligh="left">price = 10</td><td></td></tr>
-    <tr aligh="left"><td aligh="left">&#40;price &nbsp;&nbsp;&nbsp;&nbsp;    &gt;&#61;     9&#41; and price &lt; 11</td><td></td></tr>
-    <tr aligh="left"><td aligh="left">size ~ &quot;X*&quot; and price = 10</td><td></td></tr>
-    <tr aligh="left"><td aligh="left">(name ~ &quot;*stew&quot; or name ~ &quot;Het*&quot;) and price = 10</td><td></td></tr>
-    <tr aligh="left"><td aligh="left">name ~ &quot;Curry Ramen&quot; and price &lt;= 20</td><td></td></tr>
-    <tr aligh="left"><td aligh="left">size ~ &quot;M XL&quot; and name ~ &quot;Curry Ramen&quot;</td><td></td></tr>
+  <table class="my_table">
     <tr>
-      <td>&nbsp;</td>
+      <td><b>Example JQL for searching</b></td>
+    </tr>
+    <tr align="left">
+      <td>
+        <button @click='btnHandler("size ~ \"X*\" and price = 10")'>size ~ &quot;X*&quot; and price = 10</button><br /><br />
+        <button @click='btnHandler("(name ~ \"*stew\" or name ~ \"Het*\") and price = 10")'>(name ~ &quot;*stew&quot; or name ~ &quot;Het*&quot;) and price = 10</button><br /><br />
+        <button @click='btnHandler("name ~ \"Curry Ramen\" and price <= 20")'>name ~ &quot;Curry Ramen&quot; and price &lt;= 20</button><br /><br />
+        <button @click='btnHandler("size ~ \"M XL\" and name ~ \"Curry Ramen\"")'>size ~ &quot;M XL&quot; and name ~ &quot;Curry Ramen&quot;</button>
+      </td>
     </tr>
     <tr aligh="left">
-      <td><b>User Searching Keyword: </b></td>
-      <td><input v-model="userSearchingKeyword" placeholder="edit me" v-on:input="onSearchTerm()"/></td>
+      <td style="width: 100%"><div class="my_arrow">↓</div></td>
     </tr>
     <tr aligh="left">
-      <td><b>Transpfiled SQL: </b></td>
-      <td><input v-model="transpiled" placeholder="Cleaned Searching Term" disabled/></td>
+      <td style="width: 100%">
+        <b>JQL</b><br />
+        <input class="my_input" v-model="userSearchingKeyword" placeholder="Click Example JQL here" v-on:input="onSearchTerm()" disabled/>
+      </td>
+    </tr>
+    <tr aligh="left">
+      <td style="width: 100%"><div class="my_arrow">↓</div></td>
+    </tr>
+    <tr aligh="left">
+      <td style="width: 100%">
+        <b>JQL is transpfiled SQL</b><br/>
+        <textarea class="my_textarea" v-model="transpiled" placeholder="" disabled/>
+      </td>
+    </tr>
+    <tr aligh="left">
+      <td style="width: 100%"><div class="my_arrow">↓</div></td>
+    </tr>
+    <tr aligh="left">
+      <td style="width: 100%">
+        <b>SQL select statement</b><br/>
+        <textarea class="my_textarea" v-model="transpiled_select_sql" disabled/>
+      </td>
+    </tr>
+    <tr aligh="left">
+      <td style="width: 100%"><div class="my_arrow">↓</div></td>
     </tr>
   </table>
+  <div><b>SQL Results</b></div>
   <Suspense>
     <HelloWorld :msg="transpiled" />
   </Suspense>
 </template>
 
 <style scoped>
+.my_title {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.my_title_description {
+  font-size: x-large;
+}
+
+.my_table {
+  width: 100%;
+}
+
+.my_arrow {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.my_input {
+  border: 1px solid;
+  width: 100%;
+}
+
+.my_textarea {
+  border: 1px solid;
+  width: 100%;
+}
+
+.my_td {
+  width: 100%;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
